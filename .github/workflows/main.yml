@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: go to assignment1
+      run: cd assignment1
     - name: Build docker
       run: |
         docker build . -t $REPO_NAME/$IMAGE_NAME
